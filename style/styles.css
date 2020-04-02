@@ -1,0 +1,234 @@
+* {
+  box-sizing: border-box;
+}
+
+body{
+	background-color: #f8f8f8;
+	margin: 0px;
+	margin-bottom: -16px;
+	box-sizing: border-box;
+}
+h1 {
+	margin: 0px;
+	color: #2b2b28;
+  font-family: 'PT Sans', sans-serif;
+}
+h2 {
+	color: #2b2b28;
+	margin: 0px;
+	font-family: 'PT Sans', sans-serif;
+}
+h3 {
+	color: #2b2b28;
+  font-family: 'PT Sans', sans-serif;
+}
+h4 {
+	color: #2b2b28;
+  font-family: 'PT Sans', sans-serif;
+}
+p {
+	color: #2b2b28;
+  font-family: 'PT Sans', sans-serif;
+}
+a {
+	color: #2b2b28;
+  font-family: 'PT Sans', sans-serif;
+	transition: 0.25s;
+}
+a:hover {
+	text-shadow: 1px 1px 1px #2b2b28;
+}
+
+a:hover img {
+  opacity: 0.5;
+}
+
+nav {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	height: 8vh;
+	background-color: #e3b04b;
+	position: fixed;
+	width: 100%;
+	transform: translateY(-100%);
+}
+.lines {
+	display: none;
+	cursor: pointer;
+}
+.lines div {
+	width: 26px;
+	height: 3px;
+	background-color: #2b2b28;
+	margin: 3px;
+	border-radius: 4px;
+}
+.topContainer {
+	text-align: center;
+	background-color: #f1d6ab;
+	margin-top: 8vh;
+	padding-top: 30px;
+}
+.header {
+	text-align: center;
+	background-color: #f8f8f8;
+	margin: 0px;
+	margin-top: -4px;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+.profile {
+	text-align: center;
+	padding-left: 100px;
+	padding-right: 100px;
+}
+.middleContainer {
+	background-color: #f8f8f8;
+	padding: 2%;
+	margin: 0px;
+	margin-left: 20%;
+	margin-right: 20%;
+}
+.bottomContainer {
+	background-color: #e3b04b;
+	margin: 0px;
+	padding: 10px;
+}
+.skills {
+	margin-top: 150px;
+	margin-bottom: 200px;
+}
+.skillRow {
+	display: inline-block;
+}
+.hobbies {
+	margin-top: 200px;
+	margin-bottom: 200px;
+}
+.contact {
+	margin-top: 200px;
+	margin-bottom: 200px;
+	text-align: center;
+
+}
+h6 {
+	color: #bd83ce;
+}
+
+#logo {
+	letter-spacing: 4px;
+	font-size: 25px;
+}
+#navLinks {
+	display: flex;
+	justify-content: space-around;
+	width: 70%;
+}
+#navLinks li {
+	list-style: none;
+}
+#navLinks a {
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 17px;
+}
+#navLinks a:hover {
+	color: #f8f8f8;
+	text-shadow: 2px 3px 1px #2b2b28;
+}
+#skillsPic {
+	margin-right: 20px;
+	float: left;
+	width: 200px;
+	padding-left: -50px;
+}
+#hobbiesPic {
+	margin-left: 20px;
+	float: right;
+	width: 200px;
+  padding-right: -50px;
+}
+
+.projectImage {
+	width: 100%;
+}
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.row {
+	margin-top: 200px;
+	margin-bottom: 200px;
+}
+
+#gameCanvas {
+	display: block;
+	margin-left: auto;
+  margin-right: auto;
+	padding-bottom: 40px;
+	margin-top: 20px;
+	width: 50%;
+}
+
+.gif {
+  width: 60%;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+@media screen and (max-width: 768px) {
+	body {
+		overflow-x: hidden;
+	}
+	#navLinks {
+    margin: 0px;
+		position: absolute;
+		right: 0px;
+		height: 92vh;
+		top: 8vh;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		background-color: #e3b04b;
+		transform: translateX(100%);
+		transition: transform 0.5s ease-in;
+	}
+	.lines {
+		display: block;
+	}
+	.hobbyRow {
+		display: inline-block;
+	}
+	.skills {
+		padding-right: 0px;
+	}
+	.hobbies {
+		padding-right: 0px;
+		text-align: left;
+	}
+	.profile {
+		padding: 0px;
+	}
+	#hobbiesPic {
+    width: 100%;
+		margin-bottom: 20px;
+	}
+  #skillsPic {
+  	width: 100%;
+  }
+  .headerPic {
+    width: 70%;
+  }
+  h2 {
+    text-align: center;
+  }
+}
