@@ -1,0 +1,54 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bricks Game</title>
+    <link rel="stylesheet" href="../style/styles.css">
+    <link rel="icon" href="../images/icon2.ico">
+</head>
+
+<body>
+    <nav>
+        <div id="logo">
+            <h4>NAV</h4>
+        </div>
+        <ul id="navLinks">
+            <li>
+                <a href="../index.html">Home</a>
+            </li>
+            <li>
+                <a href="../projects.html">Projects</a>
+            </li>
+            <li>
+                <a href="../volunteering.html">Volunteering</a>
+            </li>
+        </ul>
+        <div class="lines" onclick="openLinks()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </nav>
+
+    <div class="topContainer">
+        <canvas id="myCanvas" width="1000" height="500" style="border:2px solid #000000;"></canvas>
+        <p>What am I placing: </p>
+    <p id="whatAmIPlacing">Satellite</p>
+    <button type="button" onclick="incrementWhatAmIPlacing()">Change what you're placing.</button>
+    <br><br>
+    </div>
+
+    <div class="bottomContainer">
+        <a class="footer-link" href="https://www.instagram.com/matthewpancakes/">Instagram</a>
+        <a class="footer-link" href="https://twitter.com/MatthewFisk11">Twitter</a>
+        <p>© 2022 Matthew Fisk.</p>
+    </div>
+
+    <script src="../scripts/navControl.js"></script>
+    <script src="../scripts/orbit/script.js"></script>
+    <script src="../scripts/orbit/prevPath.js"></script>
+    <script src="../scripts/orbit/satellite.js"></script>
+    <script src="../scripts/orbit/planet.js"></script>
+</body>
+
+</html>

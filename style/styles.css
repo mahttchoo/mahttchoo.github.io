@@ -53,6 +53,11 @@ nav {
 	width: 100%;
 	transform: translateY(-100%);
 }
+
+embed {
+	margin: 25px;
+}
+
 .lines {
 	display: none;
 	cursor: pointer;
