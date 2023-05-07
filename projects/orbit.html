@@ -2,22 +2,23 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Bricks Game</title>
+    <title>Orbital Simulation</title>
     <link rel="stylesheet" href="../style/styles.css">
+    <link rel="stylesheet" href="../style/orbit.css">
     <link rel="icon" href="../images/icon2.ico">
 </head>
 
 <body>
     <nav>
         <div id="logo">
-            <h4>NAV</h4>
+            <img src="../images/logo.png">
         </div>
         <ul id="navLinks">
             <li>
                 <a href="../index.html">Home</a>
             </li>
             <li>
-                <a href="../projects.html">Projects</a>
+                <a href="../projects.html">Portfolio</a>
             </li>
             <li>
                 <a href="../volunteering.html">Volunteering</a>
@@ -31,17 +32,38 @@
     </nav>
 
     <div class="topContainer">
-        <canvas id="myCanvas" width="1000" height="500" style="border:2px solid #000000;"></canvas>
-        <p>What am I placing: </p>
-    <p id="whatAmIPlacing">Satellite</p>
-    <button type="button" onclick="incrementWhatAmIPlacing()">Change what you're placing.</button>
-    <br><br>
+        <div style="display: table; margin: auto;">
+            <div id="ui" style="float: left; text-align:center; background-color: #d9882b; border:2px solid #000000; border-right: none;">
+                <canvas id="uiCanvas" style="border:2px solid #000000; margin: 20px;"></canvas><br>
+                <label class="switch">
+                    <input type="checkbox" onclick="swapUI()">
+                    <span class="slider">
+                        <p style="left: 1.6rem;">Satellite</p>
+                        <p style="left: 9rem;">Planet</p>
+                    </span>
+                </label>
+                <div>
+                    <p>
+                        <label for="initVel">Initial Velocity</label>
+                        <input type="range" min="1" max="11" value="6" id="initVel">
+                    </p>
+                    <p>
+                        <label for="initAngle">Initial Angle</label>
+                        <input type="range" min="0" max="360" value="0" id="initAngle">
+                    </p>
+                </div>
+            </div>
+            <div style="float:left;">
+                <canvas id="myCanvas" style="border:2px solid #000000; border-left: none; margin-bottom: 40px; cursor: pointer;"></canvas> <!--Width and Height set in script.js-->
+            </div>
+            <br><br>
+        </div>
     </div>
 
     <div class="bottomContainer">
         <a class="footer-link" href="https://www.instagram.com/matthewpancakes/">Instagram</a>
         <a class="footer-link" href="https://twitter.com/MatthewFisk11">Twitter</a>
-        <p>© 2022 Matthew Fisk.</p>
+        <p>© 2023 Matthew Fisk.</p>
     </div>
 
     <script src="../scripts/navControl.js"></script>

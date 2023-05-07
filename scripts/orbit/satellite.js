@@ -1,5 +1,3 @@
-//document.addEventListener('DOMContentLoaded', domloaded, false);
-
 function satelliteClass(posX, posY) {
     this.x = posX;
     this.y = posY;
@@ -17,7 +15,6 @@ function satelliteClass(posX, posY) {
 
     this.generateColor = function() {
         var i = Math.floor(Math.random() * 6);
-        var color;
 
         switch(i) {
             case 0:
@@ -38,7 +35,6 @@ function satelliteClass(posX, posY) {
     this.trailColor = this.generateColor();
 
     this.draw = function () {
-        //console.log("X: " + this.accX + "      Y: " + this.accY);
         canvasContext.fillStyle = 'black';
         canvasContext.beginPath();
         canvasContext.arc(this.x, this.y, 10, 0, Math.PI * 2, true);
@@ -51,15 +47,12 @@ function satelliteClass(posX, posY) {
         this.velX = this.velX + this.accX;
         this.velY = this.velY + this.accY;
 
-        if (this.x > 1500 || this.x < -500 || this.y > 1000 || this.y < -500) {
+        if (this.x > window.innerWidth + 500 || this.x < -500 || this.y > window.innerheight + 1000 || this.y < -500) {
             this.destroyBool = true;
         }
 
         this.drawVelocity();
         this.drawAcceleration();
-
-        // the dotted line method doesn't work with very fast satellites
-        // the dotted line method doesn't work with a lot of satellites at once, maybe be able to set the trail color?
 
         var pDistX = this.x - this.path[this.path.length - 1].getX();
         var pDistY = this.y - this.path[this.path.length - 1].getY();
@@ -71,15 +64,6 @@ function satelliteClass(posX, posY) {
         if (this.path.length > this.maxDotCount) {
             this.path.splice(0,1);
         }
-
-        /*
-        var pathPoint = new prevPathClass(this.x, this.y);
-        if (this.pCount >= 6) {
-            this.path.push(pathPoint);
-            this.pCount = 0;
-        } else {
-            this.pCount++;
-        }*/
     }
 
     this.setVelocity = function (vX, vY) {

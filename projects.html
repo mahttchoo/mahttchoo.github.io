@@ -10,7 +10,7 @@
 <body>
   <nav>
     <div id="logo">
-      <h4>NAV</h4>
+      <img src="images/logo.png">
     </div>
     <ul id="navLinks">
       <li>
@@ -74,6 +74,50 @@
       <div class="column">
         <a href="projects/orbit.html">
           <img src="images/orbit.png" alt="Orbit" class="projectImage">
+        </a>
+      </div>
+    </div>
+
+    <!--Course FLowchart Generator-->>
+    <div class="row">
+      <div class="column">
+        <a href="https://github.com/mahttchoo/Courseflow-Flowchart-Generator">
+          <img src="images/flowchart.png" alt="Document" class="projectImage">
+        </a>
+      </div>
+      <div class="column">
+        <h2>Course Flowchart Generator</h2>
+        <p>
+          Final project for my Algorithms Design Class, written entirely in C++. Takes in a .txt that contains a list of courses,
+          when they are available, their pre-requisites, and credit amount. The code organizes the classes as nodes on a graph and
+          connects directed edges from pre-requisites to later classes. The code performs a DFS traversal and sorts the courseload
+          in a recommended optimal order after given the maximum credit load you are willing to take per quarter. The code generates
+          two bitmap (PPM) images displaying the courseflow as well as a text output.
+          <br><br>
+          This was a team project, half of the work was done by Mark Clemmer. I set up the visual aspect and the ordering algorithm.
+          Mark set up the inputs and the graph generation. All aspects of the code have some direct influence by both of us. Many other
+          parts were equally worked on.
+          <br><br>
+          The Lemon Graph Library was used for this project.
+        </p>
+      </div>
+    </div>
+
+    <!--Java Graph Library-->
+    <div class="row">
+      <div class="column">
+        <h2>Java Graph Library</h2>
+        <p>
+          Experimental project to help me understand how graphs are used and implemented. Written in Java,
+          this code allows for the user to input a .csv file containing an adjacency matrix or to generate
+          each node and edge individually.
+          <br><br>
+          Allows for DFS, BFS, Djikstra traversals of graphs.
+        </p>
+      </div>
+      <div class="column">
+        <a href="https://github.com/mahttchoo/Java-Graph-Library">
+          <img src="images/graph.png" alt="Orbit" class="projectImage">
         </a>
       </div>
     </div>
